@@ -33,8 +33,8 @@ test("included features are not presented as separate downloads", () => {
 });
 
 test("search is case-insensitive and checks project descriptions", () => {
-  assert.deepEqual(filterStoreItems("SUNAY").map((item) => item.id), ["sunay"]);
-  assert.deepEqual(filterStoreItems("approved-site").map((item) => item.id), ["minuan"]);
+  assert.deepEqual(filterStoreItems("RENDERING LIBRARY").map((item) => item.id), ["sunay"]);
+  assert.deepEqual(filterStoreItems("approved-site list").map((item) => item.id), ["minuan"]);
 });
 
 test("category and search filters are applied together", () => {
