@@ -1,16 +1,15 @@
 {
-  "name": "Demo",
+  "name": "minuan-app-store",
   "version": "1.0.0",
-  "description": "Demo AI: A platform",
-  "author": "The Besties",
+  "description": "The SimVerse catalogue for apps, tools and projects.",
+  "author": "Minuan",
   "license": "MIT",
   "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "check": "tsc --noEmit -p tsconfig.app.json",
     "preview": "vite preview"
   },
   "peerDependencies": {
