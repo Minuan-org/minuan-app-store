@@ -1,6 +1,6 @@
 # Publishing the SimVerse App Store
 
-GitHub Pages is currently not enabled for this repository. The website code and
+GitHub Pages is not enabled for this repository yet. The website code and
 publish workflow are ready, but the public URL will not work until Pages is
 turned on in the repository settings.
 
@@ -13,5 +13,6 @@ turned on in the repository settings.
 
    https://minuan-org.github.io/minuan-app-store/
 
-To test changes before publishing, run npm ci, npm run check, and npm run build.
-The CI workflow runs these checks for pull requests and changes pushed to main.
+To test changes before publishing, run `npm ci`, `npm run check`, and
+`npm run build`. The automated workflow also checks the catalogue features
+and every file needed by the published website.

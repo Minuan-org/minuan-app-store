@@ -1,30 +1,13 @@
 {
   "name": "minuan-app-store",
   "version": "1.0.0",
-  "description": "The SimVerse catalogue for apps, tools and projects.",
+  "private": true,
+  "type": "module",
+  "description": "The dependency-free SimVerse catalogue for apps, tools and projects.",
   "author": "Minuan",
   "license": "MIT",
-  "main": "dist/index.js",
-  "files": ["dist"],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "check": "tsc --noEmit -p tsconfig.app.json",
-    "preview": "vite preview"
-  },
-  "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.104.1",
-    "react-router-dom": "^6.22.3"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "@vitejs/plugin-react": "^4.0.0",
-    "typescript": "^5.0.0",
-    "vite": "^5.0.0"
+    "check": "node scripts/check.mjs",
+    "build": "node scripts/build.mjs"
   }
 }
