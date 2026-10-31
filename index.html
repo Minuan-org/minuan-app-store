@@ -1,15 +1,110 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#090f20" />
-    <meta name="description" content="Explore real SimVerse apps, browser tools and developer projects from Minuan." />
-    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
-    <title>SimVerse App Store</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090f20">
+  <meta name="description" content="Explore real SimVerse apps, browser tools and developer projects from Minuan.">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <title>SimVerse App Store</title>
+</head>
+<body>
+  <div class="store-page">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="SimVerse App Store home">
+        <span class="brand-mark">S</span>
+        <span class="brand-copy"><strong>SIMVERSE</strong><small>APP STORE</small></span>
+      </a>
+      <nav class="header-links" aria-label="Main navigation">
+        <a href="#catalogue">Catalogue</a>
+        <a href="#about">About</a>
+        <a class="github-link" href="https://github.com/Minuan-org/minuan-app-store" target="_blank" rel="noopener noreferrer">
+          Source code ↗
+        </a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero-section">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> THE SIMVERSE COLLECTION</p>
+          <h1>Find your next<br><span>great idea.</span></h1>
+          <p class="hero-description">
+            Explore the tools and projects that help bring SimVerse to life.
+            See what is ready to download, what is built in, and what is still being made.
+          </p>
+          <a class="hero-button" href="#catalogue">Explore the catalogue ↓</a>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <div class="planet-main"><span>S</span></div>
+          <div class="planet-small"></div>
+          <div class="spark spark-one">✦</div>
+          <div class="spark spark-two">✧</div>
+          <div class="spark spark-three">·</div>
+          <div class="orbit-caption">EXPLORE · CREATE · SHARE</div>
+        </div>
+      </section>
+
+      <section class="quick-facts" aria-label="Catalogue information">
+        <div class="fact"><strong id="project-count">0</strong><span>Projects listed</span></div>
+        <div class="fact"><strong id="download-count">0</strong><span>Verified downloads</span></div>
+        <div class="fact"><strong>Growing</strong><span>New ideas in progress</span></div>
+      </section>
+
+      <section id="catalogue" class="catalogue-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">DISCOVER</p>
+            <h2>Explore the catalogue</h2>
+            <p class="section-description">Search SimVerse projects or choose a type to narrow the list.</p>
+          </div>
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="project-search" type="search" placeholder="Search projects..." aria-label="Search projects">
+          </label>
+        </div>
+
+        <div id="filter-row" class="filter-row" role="group" aria-label="Filter by project type"></div>
+        <span id="result-count" class="result-count" aria-live="polite">0 results</span>
+        <div id="app-grid" class="app-grid"></div>
+
+        <div id="empty-state" class="empty-state" hidden>
+          <div class="empty-icon" aria-hidden="true">⌕</div>
+          <h3>No projects found</h3>
+          <p>Try another search or choose a different filter.</p>
+          <button id="clear-filters" type="button" class="secondary-button">Clear filters</button>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="about-symbol" aria-hidden="true">✦</div>
+        <div>
+          <p class="eyebrow">A WORLD STILL GROWING</p>
+          <h2>SimVerse starts with imagination.</h2>
+          <p>
+            This catalogue is an early collection. Some projects are ready to explore,
+            while others are still being developed. We only show a download when a
+            real release file is available.
+          </p>
+        </div>
+        <a class="about-link" href="https://github.com/Minuan-org" target="_blank" rel="noopener noreferrer">
+          Explore Minuan organisation ↗
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#top">SIMVERSE <span>APP STORE</span></a>
+      <span>Built for exploring and creating.</span>
+      <a href="https://github.com/Minuan-org/minuan-app-store">Open source project</a>
+    </footer>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
 </html>

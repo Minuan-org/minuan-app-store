@@ -243,3 +243,14 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .about-link { grid-column: 1; }
   .site-footer { flex-wrap: wrap; padding: 19px 0; }
 }
+
+
+.empty-state[hidden] { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
